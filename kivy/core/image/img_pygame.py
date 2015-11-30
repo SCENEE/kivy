@@ -71,6 +71,9 @@ class ImageLoaderPygame(ImageLoaderBase):
         elif im.get_bytesize() == 4:
             fmt = 'rgba'
 
+        # Fix kivy.garden.mapview bug
+        fmt = 'rgba'
+
         # image loader work only with rgb/rgba image
         if fmt not in ('rgb', 'rgba'):
             try:
